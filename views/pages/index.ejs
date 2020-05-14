@@ -1,0 +1,51 @@
+<% include ../partials/genericHead %>
+
+<% if (! locals.user) { %>
+    <!-- IF not signed in -->
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome!</h1>
+        <% if (locals.dsConfig.multiSourceChooser) { %>
+            <p class="Xlead">Welcome to the DocuSign code examples with
+                OAuth Authorization Code Grant.</p>
+        <% } else { %>
+            <p class="Xlead">Welcome to the DocuSign Node.JS examples with
+                OAuth Authorization Code Grant.</p>
+        <% } %>
+    </div>
+<% } %>
+
+
+<div id="index-page">
+    <h2>Welcome</h2>
+    <p>This launcher both demonstrates use of the OAuth Authorization Code Grant flow and includes multiple workflow
+        examples for the DocuSign eSignature REST API.</p>
+
+    <% if (locals.dsConfig.multiSourceChooser) { %>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                   aria-controls="pills-home" aria-selected="true">Code Examples</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                   aria-controls="pills-profile" aria-selected="false">Launchers for C#, PHP, Node.js, Java, Curl, and more</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <% include index_examples %>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <% include index_launchers %>
+            </div>
+        </div>
+    <% } else { %>
+        <% include index_examples %>
+    <% } %>
+</div>
+
+<!-- anchor-js is only for the index page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script>anchors.options.placement = 'left'; anchors.add('h4')</script>
+
+<% include ../partials/genericFoot %>
