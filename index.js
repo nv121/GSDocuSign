@@ -72,6 +72,9 @@ let app = express()
     .get('/eg002', eg002.getController)
     .post('/eg002', eg002.createController)
 
+    .get('/egGS', egGS.getController)
+    .post('/egGS', egGS.createController)
+
     .get('/eg006', eg006.getController)
     .post('/eg006', eg006.createController)
     .get('/eg007', eg007.getController)
