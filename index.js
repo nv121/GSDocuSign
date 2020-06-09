@@ -17,7 +17,7 @@ const express = require('express')
     , csrf = require('csurf') // https://www.npmjs.com/package/csurf
 
     , eg002 = require('./lib/work/eg002SigningViaEmail')
-
+    , egGS = require('./lib/work/egGSEnvelopeList')
     , eg006 = require('./lib/work/eg006EnvelopeDocs')
     , eg007 = require('./lib/work/eg007EnvelopeGetDoc')
 
