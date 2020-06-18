@@ -4,7 +4,7 @@ const express = require('express')
     , session = require('express-session')  // https://github.com/expressjs/session
     , bodyParser = require('body-parser')
     , cookieParser = require('cookie-parser')
-    , MemoryStore = require('memorystore')(session) // https://github.com/roccomuso/memorystore
+    , MemoryStore = require('memorystore')(session)
     , path = require('path')
     , DSAuthCodeGrant = require('./lib/DSAuthCodeGrant')
     , passport = require('passport')
@@ -142,3 +142,7 @@ if (!dsConfig.allowSilentAuthentication) {
     }
 }
 passport.use(docusignStrategy);
+
+
+
+//Test to see if i can get a callback from egGSEnvelopeList
