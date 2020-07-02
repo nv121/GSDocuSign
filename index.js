@@ -144,5 +144,11 @@ if (!dsConfig.allowSilentAuthentication) {
 passport.use(docusignStrategy);
 
 
-
 //Test to see if i can get a callback from egGSEnvelopeList
+//app.get('/eg006',egGS.createController)
+
+app.get('/eg006', (req, res) => {
+    // Your route handler
+    // req is client's request
+    // res is server's response
+})
