@@ -12,9 +12,14 @@
 </p>
 <% include ../../partials/gitSource %>
 
-<form class="eg" action="" method="post" data-busy="form">
+<form class="eg" action="" method="post" name="egGS" data-busy="form">
     <input type="hidden" name="_csrf" value="<%- csrfToken %>">
-    <button type="submit" class="btn btn-primary">Continue</button>
+    <input type="submit" class="btn btn-primary">Continue in egGS formPost</input>
 </form>
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.document.forms[0].submit();
+    });
+</script>
 <% include ../../partials/examplesFoot %>

@@ -27,7 +27,7 @@
         Thank you.</p>
 
     <form class="eg" action="eg002" method="get">
-        <button type="submit" class="btn btn-primary">Continue</button>
+        <button type="submit" class="btn btn-primary">Continue in eg002 ! envOK </button>
     </form>
 <% } else if (!documentsOk) { %>
     <p>Problem: please first create a list of the envelope's documents using
@@ -35,7 +35,7 @@
         Thank you.</p>
 
     <form class="eg" action="eg006" method="get">
-        <button type="submit" class="btn btn-primary">Continue</button>
+        <button type="submit" class="btn btn-primary">Continue in eg002 !docsOk </button>
     </form>
 <% } else { %>
     <p>Please choose a document.<br/>
@@ -52,7 +52,7 @@
             </select>
         </div>
         <input type="hidden" name="_csrf" value="<%- csrfToken %>">
-        <button type="submit" class="btn btn-primary">Continue</button>
+        <button type="submit" class="btn btn-primary">Continue in eg dataBusy</button>
     </form>
 <% } %>
 

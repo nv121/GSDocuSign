@@ -22,15 +22,22 @@
 
     <form class="eg" action="" method="post" data-busy="form">
         <input type="hidden" name="_csrf" value="<%- csrfToken %>">
-        <button type="submit" class="btn btn-primary">Continue</button>
+        <input type="submit" class="btn btn-primary">Continue FormEnvOK</input>
     </form>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            window.document.forms[0].submit();
+        });
+    </script>
 
 <% } else { %>
     <p>Problem: please first create an envelope using <a href="eg002">example 2.</a> <br/>
         Thank you.</p>
 
     <form class="eg" action="eg002" method="get">
-        <button type="submit" class="btn btn-primary">Continue</button>
+        <button type="submit" class="btn btn-primary">Continue in eg006 ejs</button>
     </form>
 <% } %>
 
